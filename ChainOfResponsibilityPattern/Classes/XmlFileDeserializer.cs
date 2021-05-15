@@ -16,17 +16,36 @@ namespace ChainOfResponsibilityPattern.Classes
         public override object Handle(object fileName, object request)
         {
             string fileContent = request as string;
-            try
+            bool isFileValid = Validate(fileContent);
+
+            if (isFileValid)
             {
-                XDocument xml = XDocument.Parse(fileContent ?? string.Empty);
                 Console.WriteLine("Обработчик XML получил файл");
                 SaveFile(fileName.ToString(), fileContent, "xml");
                 return fileContent;
             }
-            catch (Exception)
+            else
             {
                 Console.WriteLine("Входной файл не является XML");
-                return base.Handle(fileName.ToString(), request);    
+                return base.Handle(fileName.ToString(), request);
+            }
+        }
+
+        /// <summary>
+        /// Валидирует XML документ
+        /// </summary>
+        /// <param name="fileContent">Документ на валидацию</param>
+        /// <returns>Результат валидации</returns>
+        public bool Validate(string fileContent)
+        {
+            try
+            {
+                XDocument xml = XDocument.Parse(fileContent ?? string.Empty);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
             }
         }
     }

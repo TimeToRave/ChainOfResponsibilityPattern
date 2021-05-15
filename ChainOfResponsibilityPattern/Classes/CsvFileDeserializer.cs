@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.IO;
 using Microsoft.VisualBasic.FileIO;
 
@@ -18,6 +19,30 @@ namespace ChainOfResponsibilityPattern.Classes
         {
             string fileContent = request as string;
 
+            bool isFileValid = Validate(fileContent);
+            if (isFileValid)
+            {
+                Console.WriteLine("Обработчик CSV получил файл");
+                SaveFile(fileName.ToString(), fileContent, "csv");
+
+                return fileContent;
+            }
+            else
+            {
+                Console.WriteLine("Входной файл не является CSV");
+                return base.Handle(fileName.ToString(), request);
+            }
+        }
+
+
+        /// <summary>
+        /// Валидирует XML документ
+        /// </summary>
+        /// <param name="fileContent">Документ на валидацию</param>
+        /// <returns>Результат валидации</returns>
+        public bool Validate(string fileContent)
+        {
+            bool validationResult = false;
 
             using (var parser = new TextFieldParser(GenerateStreamFromString(fileContent)))
             {
@@ -31,20 +56,16 @@ namespace ChainOfResponsibilityPattern.Classes
                     {
                         line = parser.ReadFields();
 
-                        Console.WriteLine("Обработчик CSV получил файл");
-                        SaveFile(fileName.ToString(), fileContent, "csv");
-
-                        return fileContent;
+                        validationResult = true;
                     }
                     catch (MalformedLineException)
                     {
-                        Console.WriteLine("Входной файл не является CSV");
-                        return base.Handle(fileName.ToString(), request);
+                        validationResult = false;
                     }
                 }
             }
 
-            return fileContent;
+            return validationResult;
         }
 
         /// <summary>
