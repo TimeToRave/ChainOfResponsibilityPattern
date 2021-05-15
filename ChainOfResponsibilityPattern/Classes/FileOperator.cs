@@ -9,6 +9,24 @@ namespace ChainOfResponsibilityPattern
     public class FileOperator
     {
         /// <summary>
+        /// Читает файл по указанному пути
+        /// </summary>
+        /// <param name="filePath">Адрес файла</param>
+        /// <returns>Результат в стороковом представлении</returns>
+        public string ReadTextFromFile(string filePath)
+        {
+            try
+            {
+                return File.ReadAllText(filePath);
+            }
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine($"{filePath} file doesn't exists");
+                return string.Empty;
+            }
+        }
+        
+        /// <summary>
         /// Записывает строку в файл
         /// </summary>
         /// <param name="filePath">Адрес файла</param>
