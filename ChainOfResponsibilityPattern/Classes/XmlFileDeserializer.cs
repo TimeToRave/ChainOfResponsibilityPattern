@@ -20,9 +20,11 @@ namespace ChainOfResponsibilityPattern.Classes
 
             if (isFileValid)
             {
+                string fileExtension = "xml";
+                
                 Console.WriteLine("Обработчик XML получил файл");
-                SaveFile(fileName.ToString(), fileContent, "xml");
-                return fileContent;
+                SaveFile(fileName.ToString(), fileContent, fileExtension);
+                return fileExtension;
             }
             else
             {

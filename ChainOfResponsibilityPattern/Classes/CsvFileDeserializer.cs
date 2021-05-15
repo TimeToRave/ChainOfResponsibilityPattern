@@ -22,10 +22,12 @@ namespace ChainOfResponsibilityPattern.Classes
             bool isFileValid = Validate(fileContent);
             if (isFileValid)
             {
+                string fileExtension = "csv";
+                
                 Console.WriteLine("Обработчик CSV получил файл");
                 SaveFile(fileName.ToString(), fileContent, "csv");
 
-                return fileContent;
+                return fileExtension;
             }
             else
             {

@@ -20,8 +20,11 @@ namespace ChainOfResponsibilityPattern.Classes
 
             if (isFileValid)
             {
-                SaveFile(fileName.ToString(), fileContent, "json");
-                return fileContent;
+                string fileExtension = "json";
+                
+                Console.WriteLine("Обработчик JSON получил файл");
+                SaveFile(fileName.ToString(), fileContent, fileExtension);
+                return fileExtension;
             }
             else
             {
