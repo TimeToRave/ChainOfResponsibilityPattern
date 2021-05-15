@@ -16,13 +16,17 @@ namespace ChainOfResponsibilityPattern.Classes
         /// <summary>
         /// Выполняет обработку входного файла
         /// </summary>
-        /// <param name="request"></param>
+        /// <param name="fileName">Название файла</param>
+        /// <param name="request">Содержимое файла</param>
         /// <returns></returns>
-        public virtual object Handle(object request)
+        public virtual object Handle(object fileName, object request)
         {
+
             if (NextHandler != null)
             {
-                return NextHandler.Handle(request);
+                return NextHandler.Handle(
+                    fileName.ToString(),
+                    request);
             }
             else
             {
@@ -36,10 +40,10 @@ namespace ChainOfResponsibilityPattern.Classes
         /// </summary>
         /// <param name="fileContent">Содержимое файла</param>
         /// <param name="fileExtension">Расширение выходного файла</param>
-        public void SaveFile(string fileContent, string fileExtension)
+        public void SaveFile(string fileName, string fileContent, string fileExtension)
         {
             FileOperator fileOperator = new FileOperator();
-            fileOperator.WriteTextToFile("output."+fileExtension, fileContent);
+            fileOperator.WriteTextToFile($"{fileName}.{fileExtension}", fileContent);
         } 
     }
 }

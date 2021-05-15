@@ -4,6 +4,6 @@
     {
         public IHandler NextHandler { get; set; }
 
-        public object Handle(object request);
+        public object Handle(object parameter, object request);
     }
 }

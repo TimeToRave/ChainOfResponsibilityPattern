@@ -12,8 +12,9 @@ namespace ChainOfResponsibilityPattern.Classes
         /// <summary>
         /// Валидация CSV документа
         /// </summary>
+        /// <param name="fileName">Название файла</param>
         /// <param name="request">Входной объект. Ожидается строка</param>
-        public override object Handle(object request)
+        public override object Handle(object fileName, object request)
         {
             string fileContent = request as string;
 
@@ -31,13 +32,14 @@ namespace ChainOfResponsibilityPattern.Classes
                         line = parser.ReadFields();
 
                         Console.WriteLine("Обработчик CSV получил файл");
-                        SaveFile(fileContent, "csv");
+                        SaveFile(fileName.ToString(), fileContent, "csv");
 
                         return fileContent;
                     }
-                    catch (MalformedLineException ex)
+                    catch (MalformedLineException)
                     {
-                        return base.Handle(request);
+                        Console.WriteLine("Входной файл не является CSV");
+                        return base.Handle(fileName.ToString(), request);
                     }
                 }
             }
@@ -50,7 +52,7 @@ namespace ChainOfResponsibilityPattern.Classes
         /// </summary>
         /// <param name="str">Исходная строка</param>
         /// <returns>Поток</returns>
-        private static Stream GenerateStreamFromString(string str)
+        private Stream GenerateStreamFromString(string str)
         {
             var stream = new MemoryStream();
             var writer = new StreamWriter(stream);

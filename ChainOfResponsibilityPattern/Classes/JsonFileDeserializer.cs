@@ -11,8 +11,9 @@ namespace ChainOfResponsibilityPattern.Classes
         /// <summary>
         /// Валидация JSON объекта
         /// </summary>
+        /// <param name="fileName">Название файла</param>
         /// <param name="request">Входной объект. Ожидается строка</param>
-        public override object Handle(object request)
+        public override object Handle(object fileName,  object request)
         {
             string fileContent = request as string;
             try
@@ -20,13 +21,14 @@ namespace ChainOfResponsibilityPattern.Classes
                 var obj = JToken.Parse(fileContent);
                 
                 Console.WriteLine("Обработчик JSON получил файл");
-                SaveFile(fileContent, "json");
+                SaveFile(fileName.ToString(), fileContent, "json");
                 
                 return fileContent;
             }
             catch (Exception)
-            {
-                return base.Handle(request);    
+            { 
+                Console.WriteLine("Входной файл не является JSON");
+                return base.Handle(fileName.ToString(), request);    
             }
         }
     }
