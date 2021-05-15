@@ -1,5 +1,7 @@
 # Реализация паттерна "Цепочка обязанностей"
 
+[![Tests](https://github.com/TimeToRave/ChainOfResponsibilityPattern/actions/workflows/dotnet.yml/badge.svg)](https://github.com/TimeToRave/ChainOfResponsibilityPattern/actions/workflows/dotnet.yml)
+
 ## Задача
 
 Реализовать программу-парсер файлов в зависимости от их типа
