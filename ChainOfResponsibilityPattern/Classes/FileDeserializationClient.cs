@@ -17,7 +17,9 @@ namespace ChainOfResponsibilityPattern.Classes
             IHandler xmlDeserializer = new XmlFileDeserializer();
             IHandler jsonDeserializer = new JsonFileDeserializer();
             IHandler csvDeserializer = new CsvFileDeserializer();
+            IHandler txtDeserializer = new TxtFileDeserializer();
 
+            csvDeserializer.NextHandler = txtDeserializer;
             jsonDeserializer.NextHandler = csvDeserializer;
             xmlDeserializer.NextHandler = jsonDeserializer;
             
