@@ -12,7 +12,7 @@ namespace ChainOfResponsibilityPattern.Classes
         /// </summary>
         /// <param name="fileName">Название файла</param>
         /// <param name="fileContent">Содержимое файла</param>
-        public void Run(string fileName, string fileContent)
+        public object Run(string fileName, string fileContent)
         {
             IHandler xmlDeserializer = new XmlFileDeserializer();
             IHandler jsonDeserializer = new JsonFileDeserializer();
@@ -21,7 +21,8 @@ namespace ChainOfResponsibilityPattern.Classes
             jsonDeserializer.NextHandler = csvDeserializer;
             xmlDeserializer.NextHandler = jsonDeserializer;
             
-            xmlDeserializer.Handle(fileName, fileContent);
+            var result = xmlDeserializer.Handle(fileName, fileContent);
+            return result;
         }
     }
 }
