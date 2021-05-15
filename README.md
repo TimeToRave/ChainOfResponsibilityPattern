@@ -10,3 +10,4 @@
 
 ## Диаграмма классов
 
+![Диаграмма классов](https://raw.githubusercontent.com/TimeToRave/ChainOfResponsibilityPattern/main/ClassDiagram.png)
