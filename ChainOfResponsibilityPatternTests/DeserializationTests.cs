@@ -126,5 +126,57 @@ namespace ChainOfResponsibilityPatternTests
             
             Assert.IsTrue(validationResult);
         }
+        
+        /// <summary>
+        /// Проверяет TXT валидитор
+        /// На вход подается XML
+        /// </summary>
+        [Test]
+        public void TxtFileDeserializer_Xml()
+        {
+            var fileDeserializer = new TxtFileDeserializer();
+            bool validationResult = fileDeserializer.Validate(xml);
+            
+            Assert.IsTrue(validationResult);
+        }
+        
+        /// <summary>
+        /// Проверяет TXT валидитор
+        /// На вход подается JSON
+        /// </summary>
+        [Test]
+        public void TxtFileDeserializer_Json()
+        {
+            var xmlFileDeserializer = new TxtFileDeserializer();
+            bool validationResult = xmlFileDeserializer.Validate(json);
+            
+            Assert.IsTrue(validationResult);
+        }
+        
+        /// <summary>
+        /// Проверяет TXT валидитор
+        /// На вход подается CSV
+        /// </summary>
+        [Test]
+        public void TxtFileDeserializer_Csv()
+        {
+            var xmlFileDeserializer = new TxtFileDeserializer();
+            bool validationResult = xmlFileDeserializer.Validate(csv);
+            
+            Assert.IsTrue(validationResult);
+        }
+        
+        /// <summary>
+        /// Проверяет TXT валидитор
+        /// На вход подается произвольная строка
+        /// </summary>
+        [Test]
+        public void TxtFileDeserializer_Txt()
+        {
+            var xmlFileDeserializer = new TxtFileDeserializer();
+            bool validationResult = xmlFileDeserializer.Validate(csv);
+            
+            Assert.IsTrue(validationResult);
+        }
     }
 }
