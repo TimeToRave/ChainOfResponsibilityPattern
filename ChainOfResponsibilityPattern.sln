@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResponsibilityPattern", "ChainOfResponsibilityPattern\ChainOfResponsibilityPattern.csproj", "{FBB74ED7-C7CF-41F9-9A0D-BE2EFD1008DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResponsibilityPatternTests", "ChainOfResponsibilityPatternTests\ChainOfResponsibilityPatternTests.csproj", "{F2AE810B-CC3E-4AAF-9B89-AFD0A494247F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{FBB74ED7-C7CF-41F9-9A0D-BE2EFD1008DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBB74ED7-C7CF-41F9-9A0D-BE2EFD1008DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBB74ED7-C7CF-41F9-9A0D-BE2EFD1008DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2AE810B-CC3E-4AAF-9B89-AFD0A494247F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2AE810B-CC3E-4AAF-9B89-AFD0A494247F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2AE810B-CC3E-4AAF-9B89-AFD0A494247F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2AE810B-CC3E-4AAF-9B89-AFD0A494247F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
