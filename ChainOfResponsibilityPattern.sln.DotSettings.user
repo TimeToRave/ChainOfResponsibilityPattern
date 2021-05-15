@@ -1,4 +1,29 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=09541662_002D0fab_002D4975_002Db10d_002D88f8894612ec/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from UnitTest1.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;ProjectFile&gt;F2AE810B-CC3E-4AAF-9B89-AFD0A494247F/f:UnitTest1.cs&lt;/ProjectFile&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=09541662_002D0fab_002D4975_002Db10d_002D88f8894612ec/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from UnitTest1.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::F2AE810B-CC3E-4AAF-9B89-AFD0A494247F::net5.0::ChainOfResponsibilityPatternTests.ClientTests.FileDeserializationClient_Xml&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::F2AE810B-CC3E-4AAF-9B89-AFD0A494247F::net5.0::ChainOfResponsibilityPatternTests.ClientTests.FileDeserializationClient_NonFormattedString&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::F2AE810B-CC3E-4AAF-9B89-AFD0A494247F::net5.0::ChainOfResponsibilityPatternTests.ClientTests&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+    &lt;ProjectFile&gt;F2AE810B-CC3E-4AAF-9B89-AFD0A494247F/f:DeserializationTests.cs&lt;/ProjectFile&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=21ed2db2_002D8c6a_002D4b66_002Da5de_002Dcc0b7ef3866d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="FileDeserializationClient_EmptyString #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::F2AE810B-CC3E-4AAF-9B89-AFD0A494247F::net5.0::ChainOfResponsibilityPatternTests.ClientTests.FileDeserializationClient_EmptyString&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6bcc8ac9_002D84bc_002D42a8_002D9f0b_002Dc7d9d3867997/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="FileDeserializationClient_EmptyString #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Project Location="E:\Projects\Patterns\ChainOfResponsibilityPattern\ChainOfResponsibilityPatternTests" Presentation="&amp;lt;ChainOfResponsibilityPatternTests&amp;gt;" /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a7d6376d_002D37d2_002D4047_002Db4d4_002D667108c45ae8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="FileDeserializationClient_EmptyString #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::F2AE810B-CC3E-4AAF-9B89-AFD0A494247F::net5.0::ChainOfResponsibilityPatternTests.ClientTests.FileDeserializationClient_EmptyString&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d1a0be9b_002D357d_002D4338_002D9260_002Dcc6e045a1ef7/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="FileDeserializationClient_EmptyString" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::F2AE810B-CC3E-4AAF-9B89-AFD0A494247F::net5.0::ChainOfResponsibilityPatternTests.ClientTests.FileDeserializationClient_EmptyString&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
